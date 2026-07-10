@@ -36,9 +36,23 @@ Her push'ta GitHub Actions debug APK'yı derleyip **tv-browser-debug-apk** artif
 
 ## Kurulum (sideload)
 
-1. Actions sekmesinden son başarılı build'in `tv-browser-debug-apk` artifact'ını indirin.
+1. [Releases](../../releases) sayfasından en son `TV-Browser-vX.Y.apk` dosyasını indirin
+   (veya Actions sekmesinden `tv-browser-debug-apk` artifact'ını alın).
 2. TV'de *Bilinmeyen kaynaklardan kuruluma* izin verin.
-3. APK'yı USB bellek veya `adb install app-debug.apk` ile kurun.
+3. APK'yı USB bellek veya `adb install TV-Browser-v1.0.apk` ile kurun.
+
+## Release
+
+`v*` biçiminde bir tag push'lamak (örn. `v1.0`) GitHub Actions'ta imzalı release APK'sını
+derler ve otomatik olarak bir GitHub Release oluşturup APK'yı ekler:
+
+```bash
+git tag v1.0 && git push origin v1.0
+```
+
+> Not: APK, CI'ın geçici debug anahtarıyla imzalanır. Her sürümde imza değiştiği için
+> **güncellemeden önce eski sürümü kaldırmanız** gerekir. Play Store gibi mağazalar
+> için kalıcı ve gizli bir imzalama anahtarı yapılandırılmalıdır.
 
 ## Teknik detaylar
 

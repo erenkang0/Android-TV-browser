@@ -23,6 +23,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // Sideload-only distribution: sign with the debug key so the APK
+            // is installable straight from GitHub Releases.
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 
