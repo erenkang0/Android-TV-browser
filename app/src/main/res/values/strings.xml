@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TV Browser</string>
+    <string name="url_hint">Search or enter address</string>
+    <string name="home_search_hint">Search the web or enter an address</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_forward">Forward</string>
+    <string name="btn_refresh">Refresh</string>
+    <string name="btn_home">Home</string>
+    <string name="btn_bookmark">Bookmark</string>
+    <string name="btn_tabs">Tabs</string>
+    <string name="btn_menu">Menu</string>
+    <string name="tabs_title">Tabs</string>
+    <string name="new_tab">New tab</string>
+    <string name="close_tab">Close tab</string>
+    <string name="bookmarks_title">Bookmarks</string>
+    <string name="no_bookmarks">No bookmarks yet</string>
+    <string name="bookmark_added">Bookmark added</string>
+    <string name="bookmark_removed">Bookmark removed</string>
+    <string name="history_title">History</string>
+    <string name="no_history">No history</string>
+    <string name="clear_history">Clear history</string>
+    <string name="settings_title">Settings</string>
+    <string name="search_engine">Search engine</string>
+    <string name="user_agent">User agent</string>
+    <string name="ua_tv">TV (default)</string>
+    <string name="ua_desktop">Desktop</string>
+    <string name="ua_mobile">Mobile</string>
+    <string name="clear_cookies">Clear cookies</string>
+    <string name="clear_cache">Clear cache</string>
+    <string name="cookies_cleared">Cookies cleared</string>
+    <string name="cache_cleared">Cache cleared</string>
+    <string name="history_cleared">History cleared</string>
+    <string name="exit_title">Exit browser?</string>
+    <string name="exit_message">Do you want to close the browser?</string>
+    <string name="exit_yes">Exit</string>
+    <string name="cancel">Cancel</string>
+    <string name="ssl_error_title">Security warning</string>
+    <string name="ssl_error_message">This site\'s security certificate is not trusted. Continue anyway?</string>
+    <string name="ssl_continue">Continue</string>
+    <string name="page_error_title">Page could not be loaded</string>
+    <string name="downloads_unsupported">Downloads are not supported on TV</string>
+    <string name="speed_dial_title">Quick access</string>
+    <string name="loading">Loading…</string>
+    <string name="delete">Delete</string>
+</resources>

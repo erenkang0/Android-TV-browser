@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TV Tarayıcı</string>
+    <string name="url_hint">Ara veya adres gir</string>
+    <string name="home_search_hint">İnternette ara veya adres gir</string>
+    <string name="btn_back">Geri</string>
+    <string name="btn_forward">İleri</string>
+    <string name="btn_refresh">Yenile</string>
+    <string name="btn_home">Ana sayfa</string>
+    <string name="btn_bookmark">Yer imi</string>
+    <string name="btn_tabs">Sekmeler</string>
+    <string name="btn_menu">Menü</string>
+    <string name="tabs_title">Sekmeler</string>
+    <string name="new_tab">Yeni sekme</string>
+    <string name="close_tab">Sekmeyi kapat</string>
+    <string name="bookmarks_title">Yer imleri</string>
+    <string name="no_bookmarks">Henüz yer imi yok</string>
+    <string name="bookmark_added">Yer imi eklendi</string>
+    <string name="bookmark_removed">Yer imi kaldırıldı</string>
+    <string name="history_title">Geçmiş</string>
+    <string name="no_history">Geçmiş boş</string>
+    <string name="clear_history">Geçmişi temizle</string>
+    <string name="settings_title">Ayarlar</string>
+    <string name="search_engine">Arama motoru</string>
+    <string name="user_agent">Tarayıcı kimliği</string>
+    <string name="ua_tv">TV (varsayılan)</string>
+    <string name="ua_desktop">Masaüstü</string>
+    <string name="ua_mobile">Mobil</string>
+    <string name="clear_cookies">Çerezleri temizle</string>
+    <string name="clear_cache">Önbelleği temizle</string>
+    <string name="cookies_cleared">Çerezler temizlendi</string>
+    <string name="cache_cleared">Önbellek temizlendi</string>
+    <string name="history_cleared">Geçmiş temizlendi</string>
+    <string name="exit_title">Tarayıcıdan çıkılsın mı?</string>
+    <string name="exit_message">Tarayıcıyı kapatmak istiyor musunuz?</string>
+    <string name="exit_yes">Çık</string>
+    <string name="cancel">İptal</string>
+    <string name="ssl_error_title">Güvenlik uyarısı</string>
+    <string name="ssl_error_message">Bu sitenin güvenlik sertifikası güvenilir değil. Yine de devam edilsin mi?</string>
+    <string name="ssl_continue">Devam et</string>
+    <string name="page_error_title">Sayfa yüklenemedi</string>
+    <string name="downloads_unsupported">TV\'de indirme desteklenmiyor</string>
+    <string name="speed_dial_title">Hızlı erişim</string>
+    <string name="loading">Yükleniyor…</string>
+    <string name="delete">Sil</string>
+</resources>
