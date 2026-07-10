@@ -5,10 +5,16 @@ on:
     branches: ["**"]
     tags: ["v*"]
   pull_request:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v1.0)"
+        required: true
+        default: "v1.0"
 
 jobs:
   build:
-    if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+    if: ${{ !startsWith(github.ref, 'refs/tags/') && github.event_name != 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,10 +41,12 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
 
   release:
-    if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+    if: ${{ startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      RELEASE_TAG: ${{ github.event.inputs.tag || github.ref_name }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -57,11 +65,13 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleRelease --stacktrace
           mv app/build/outputs/apk/release/app-release.apk \
-             "TV-Browser-${GITHUB_REF_NAME}.apk"
+             "TV-Browser-${RELEASE_TAG}.apk"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: TV Browser ${{ github.ref_name }}
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: TV Browser ${{ env.RELEASE_TAG }}
+          target_commitish: ${{ github.sha }}
           files: TV-Browser-*.apk
           generate_release_notes: true
